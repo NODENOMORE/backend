@@ -1,10 +1,9 @@
-
 const Word = require('../classes/word_class');
 
 exports.create = async (request, response) => {
   const word = new Word(request.body);
   await word.insert();
-  response.json(word.json());
+  response.json(word.getLiteral());
 }
 
 exports.read = async (request, response) => {
@@ -13,17 +12,27 @@ exports.read = async (request, response) => {
   response.json(word);
 }
 
-exports.update = async (request, response) => {
-  const word = new Word(request.body);
-  await word.getById(id);
-  response.json(word);
+exports.getByWord = async (request, response) => {
+  const word = new Word();
+  await word.getByWord
+  const results = await topSongs.getByArtistName(request.params.name);
+  response.json(results);
 }
 
-exports.delete = async (request, response) => {
-  const word = new Word(request.body);
+exports.update = async (request, response) => {
+  const id = request.params.id;
+  const word = new Word();
   await word.getById(id);
-  response.json(word);
+  word.merge(request.body);
+  await word.update(id);
+  response.json(word.getLiteral());
 }
+
+// exports.delete = async (request, response) => {
+//   const word = new Word(request.body);
+//   await word.getById(id);
+//   response.json(word);
+// }
 
 // Follow Paul's Ice Cream OOP Example...
 // Ask Paul... should we have a separate ORM file?
