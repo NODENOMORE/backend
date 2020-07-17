@@ -1,8 +1,8 @@
 const functions = require('./functions');
 
-// test('Adds 2 + 2 to equal 4', () => {
-//   expect(functions.add(2,2)).toBe(4);
-// });
+test('Adds 2 + 2 to equal 4', () => {
+  expect(functions.add(2,2)).toBe(4);
+});
 
 
 // test('Checks "test" word in database for matching definition', () => {
@@ -10,19 +10,19 @@ const functions = require('./functions');
 // });
 
 
-test('Checks "test" word in database for matching definition', () => {
+// test('Checks "test" word in database for matching definition', () => {
   
-  const row = {
-    id: 1,
-    word: 'word', 
-    definition: 'definition', 
-    favorite: '0',
+//   const row = {
+//     id: 1,
+//     word: 'word', 
+//     definition: 'definition', 
+//     favorite: '0',
 
-    ///
-  }
+//     ///
+//   }
 
-  const word = new Word(row)
+//   const word = new Word(row)
 
-  expect(word.word).toBe('test');
-});
+//   expect(word.word).toBe('test');
+// });
 
