@@ -6,13 +6,13 @@ exports.route = (app) => {
   //   res.send('Hello, World!')
   // });
 
-  // app.post('/mywords', words.create);
+  app.post('/myword', words.create);
 
   app.get('/mywords', words.read);
 
-  app.get('/mywords/:id?', words.read);
+  // app.get('/mywords/:id?', words.read);
 
-  app.patch('/mywords/:id', words.update);
+  // app.patch('/mywords/:id', words.update);
 
-  app.delete('/mywords/id', words.delete);
+  // app.delete('/mywords/id', words.delete);
 }
