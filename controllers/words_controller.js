@@ -24,7 +24,7 @@ exports.update = async (request, response) => {
   const word = new Word();
   await word.getById(id);
   word.merge(request.body);
-  await word.update(id);
+  await word.update(notes);
   response.json(word.getLiteral());
 }
 
