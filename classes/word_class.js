@@ -8,7 +8,7 @@ class Word {
   get id(){
       return this._word.id;
   }
-  
+
   get word(){
     return this._word.word;
   }
@@ -22,15 +22,15 @@ class Word {
 
   get favorite(){
     return this._word.favorite;
-  } 
+  }
 
   get category(){
     return this._word.category;
-  } 
+  }
 
   get category(){
     return this._word.notes;
-  } 
+  }
 
   async getAll(){
       this._word = await wordModel.selectAll();
@@ -66,7 +66,7 @@ class Word {
 module.exports = Word;
 
 //make a word class object and test the id is the definnition you gave it
-//you pass in "one" 
+//you pass in "one"
 //add one key per column in class
 // hard code an object literal
 // make it look like it came from a db

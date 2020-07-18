@@ -12,7 +12,7 @@ exports.route = (app) => {
 
   // app.get('/mywords/:id?', words.read);
 
-  // app.patch('/mywords/:id', words.update);
+  // app.patch('/wordupdate', words.update);
 
   // app.delete('/mywords/id', words.delete);
 }
