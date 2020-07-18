@@ -1,17 +1,21 @@
-class Word {
-  constructor(word_obj) {
-    this.id = 1;
-    this.word = 'helicopter'; 
-    this.definition = 'a type of aircraft which derives both lift and propulsion from one or more sets of horizontally revolving overhead rotors. It is capable of moving vertically and horizontally, the direction of motion being controlled by the pitch of the rotor blades.'; 
-    this.favorite = 0;
-    this.category = 'dirigibles';
-    this.notes = 'helicopters are dangerous!';
-  }   
+const functions = {
 
-  getLength(){
-    this.word.length;
+  // add: (num1, num2) => num1 + num2,
+
+  // OR //
+
+  add: function(num1, num2) {
+    return num1 + num2;
   }
 
+  // word: () => 'test' === 'these are my notes',
+
+  // word: 'test', 
+  // definition: 'these are my notes',
+
 }
+
+  // Add function to test that word in dictionary has the correct definition
+
 
 module.exports = functions;
