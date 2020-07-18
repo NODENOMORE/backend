@@ -8,11 +8,13 @@ exports.route = (app) => {
 
   app.post('/myword', words.create);
 
-  app.get('/mywords', words.read);
+  app.get('/mywords', words.readAll);
+  
+  app.get('/mywords/:id', words.read);
 
   // app.get('/mywords/:id?', words.read);
 
-  // app.patch('/wordupdate', words.update);
+  app.patch('/wordupdate/:id', words.update);
 
-  // app.delete('/mywords/id', words.delete);
+  app.delete('/removeword/:id', words.delete);
 }
