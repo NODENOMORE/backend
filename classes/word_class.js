@@ -49,25 +49,21 @@ class Word {
     await wordModel.update(id, this._word);
   }
 
-
   getLiteral(){
       return this._word;
   }
 
 }
 
-
 // Word.definition = "This Stuff";
 
 // console.log(Word)
 
-
-
 // const fun = new Word()
+
 // console.log(fun.definition)
 
 module.exports = Word;
-
 
 //make a word class object and test the id is the definnition you gave it
 //you pass in "one" 
