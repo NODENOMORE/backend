@@ -12,14 +12,14 @@ exports.selectAll = async () => {
 //   return data;
 // }
 
-exports.insert = async (id, word_obj) => {
+exports.insert = async (word_obj) => {
   const connection = await mysql.connect();
-  const [data] = await connection.query(`INSERT INTO mywords SET ?`, [word_obj, id]);
+  const [data] = await connection.query(`INSERT INTO mywords SET ?`, word_obj);
   return data;
 }
 
-exports.update = async (id, word_obj) => {
-  const connection = await mysql.connect();
-  const [data] = await connection.query(`UPDATE mywords SET ? WHERE  id = id:`, [word_obj]);
-  return data;
-}
+// exports.update = async (id, word_obj) => {
+//   const connection = await mysql.connect();
+//   const [data] = await connection.query(`UPDATE mywords SET ? WHERE id = ?`, [word-obj, id]);
+//   return data;
+// }
