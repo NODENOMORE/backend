@@ -14,12 +14,4 @@
 
 // }
 
-// test('Checks if the length of the word is less than 10 letters long.', () => {
-//   const werd = new Word();
-
-
-//   // Add function to test that word in dictionary has the correct definition
-
-// });
-
 // module.exports = functions;
