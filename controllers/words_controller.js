@@ -6,10 +6,17 @@ exports.create = async (request, response) => {
   response.json(word.getLiteral());
 }
 
-exports.read = async (request, response) => {
+exports.readAll = async (request, response) => {
   const word = new Word();
   await word.getAll();
   response.json(word);
+}
+
+exports.read = async (request, response) => {
+  const id = request.params.id;
+  const word = new Word();
+  await word.getById(id);
+  response.json(word.getLiteral());
 }
 
 exports.getByWord = async (request, response) => {
@@ -23,19 +30,17 @@ exports.update = async (request, response) => {
   const id = request.params.id;
   const word = new Word();
   await word.getById(id);
-  word.merge(request.body);
-  await word.update(notes);
+  await word.merge(request.body);
+  await word.update(id);
   response.json(word.getLiteral());
 }
 
-// exports.delete = async (request, response) => {
-//   const word = new Word(request.body);
-//   await word.getById(id);
-//   response.json(word);
-// }
-
-// Follow Paul's Ice Cream OOP Example...
-// Ask Paul... should we have a separate ORM file?
-// Ask... Why routes are in the Controller file in 13.16
-// Ask... where should we be doing error handling?
-// No error handling in his Ice Cream OOP example. Controller?
+exports.delete = async (request, response) => {
+  const id = request.params.id;
+  const empty = '';
+  const word = new Word(request.body);
+  await word.getById(id);
+  await word.merge(request.body);
+  await word.delete(id);
+  response.json(word.getLiteral()); 
+}
